@@ -1,17 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import animals from './animals.json';
-import Card from './components/Card/index';
 import CardContainer from './components/CardContainer';
+import Header from './components/Header';
 
 
 function App() {
 
-
   return (
-    <CardContainer animals={animals}/>
+    <>
+      <Header />
+      <CardContainer animals={animals} />
+    </>
   );
-}
+};
 
 export default App;
