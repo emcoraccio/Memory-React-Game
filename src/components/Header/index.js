@@ -2,12 +2,14 @@ import React from 'react';
 import Message from '../Message';
 import Score from '../Score';
 
-function Header() {
+function Header(props) {
+
+  const { score, topScore } = props;
 
   return (
     <>
       <Message />
-      <Score />
+      <Score score={score} topScore={topScore}/>
     </>
   );
 
