@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Supermercado+One|ZCOOL+XiaoWei&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'ZCOOL XiaoWei', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1.title {
+  font-family: 'Supermercado One', cursive;
 }
+

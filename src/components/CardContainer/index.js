@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Card from './Card';
 import './styles.css'
 import animals from '../../animals.json';
 
@@ -8,7 +7,7 @@ class CardContainer extends Component {
 
     super(props);
 
-    const { changeScore } = this.props;
+    const { changeScore, score } = this.props;
 
     this.state = {
       clicked: [],
@@ -25,16 +24,22 @@ class CardContainer extends Component {
 
     this.clickImage = (imageId) => {
       if (this.state.clicked.indexOf(imageId) === -1) {
+
+        const clicked = this.state.clicked.length === 11 ? [] : [...this.state.clicked, imageId]
+
         this.setState({
-          clicked: [...this.state.clicked, imageId]
-        })
+          clicked
+        });
         changeScore("increase");
+
       }
       else {
+        
         changeScore("reset");
         this.setState({
           clicked: []
         });
+
       };
     };
 
@@ -45,20 +50,20 @@ class CardContainer extends Component {
 
     return (
 
-        <div className="row">
-          {this.shuffleImgs(animals)}
-          {animals.map(animal => (
+      <div className="row">
+        {this.shuffleImgs(animals)}
+        {animals.map(animal => (
 
-            <div className="col s6 m4 l3 card-col" key={animal.id}>
-              <div className="card hoverable">
-                <div className="card-image">
-                  <img src={animal.image} alt={animal.alt} onClick={() => { this.clickImage(animal.id) }} />
-                </div>
+          <div className="col s6 m4 l3 card-col" key={animal.id}>
+            <div className="card hoverable">
+              <div className="card-image">
+                <img src={animal.image} alt={animal.alt} onClick={() => { this.clickImage(animal.id) }} />
               </div>
             </div>
-          ))}
+          </div>
+        ))}
 
-        </div>
+      </div>
 
     );
 
