@@ -26,4 +26,7 @@ Only four things are stored in state throughout the site:
 The images are shuffled through a shuffle function which shuffles the array of animal pictures and then they are dynamically rendered to the page using the map function. The data for the images is stored in a json file.
 
 ## Other Info
-This game was built as part of an assigment done for my coding bootcamp. It is my first application built using react.
+This game was built as part of an assigment done for my coding bootcamp. It is my first application built using react. <br/>
+It is deployed here: https://emcoraccio.github.io/Memory-React-Game/ <br/>
+<br/>
+I also took it upon myself to convert this to use typescript. Take a look at the typescript version here: https://github.com/emcoraccio/React-Memory-Game-TS
